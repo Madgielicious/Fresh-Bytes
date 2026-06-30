@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Services | FreshStart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-fresh">Fresh</span><span class="logo-start">Start</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="services.html" class="active-link">Services</a></li>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#chatbot">AI Assistant</a></li>
+        <li><a href="index.html#faq">FAQs</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- ===== Page Header ===== -->
+  <header class="services-hero">
+    <div class="container">
+      <h1>Browse <span class="highlight">Government Services</span></h1>
+      <p>Pick a service to see its requirements checklist, step-by-step guide, and where to go. Check off items as you collect them — your progress is saved on this device.</p>
+
+      <div class="search-bar" id="serviceSearchBar">
+        <input type="text" id="serviceSearch" placeholder="Search a service (e.g. PhilHealth, scholarship, NBI)" />
+        <button type="button" class="btn-primary" id="serviceSearchBtn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Service Tabs ===== -->
+  <section class="section services-page">
+    <div class="container services-layout">
+
+      <!-- Tab list -->
+      <aside class="service-tablist" id="serviceTablist" aria-label="Government services">
+        <!-- buttons injected by JS -->
+      </aside>
+
+      <!-- Detail panel -->
+      <div class="service-panel" id="servicePanel">
+        <!-- content injected by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo"><span class="logo-fresh">Fresh</span><span class="logo-start">Start</span></div>
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#chatbot">AI Assistant</a>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 FreshStart. Student Government Services Navigator.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="services-data.js"></script>
+  <script src="services.js"></script>
+</body>
+</html>
