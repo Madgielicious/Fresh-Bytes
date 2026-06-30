@@ -121,4 +121,20 @@ function initFaqAccordion() {
 document.addEventListener('DOMContentLoaded', () => {
   initRevealOnScroll();
   initFaqAccordion();
+
+  const loader = document.getElementById('pageLoader');
+  const body = document.body;
+
+  window.addEventListener('load', () => {
+    if (loader) {
+      loader.classList.add('hidden');
+      setTimeout(() => {
+        if (body.classList.contains('page-loading')) {
+          body.classList.remove('page-loading');
+        }
+      }, 400);
+    } else {
+      body.classList.remove('page-loading');
+    }
+  });
 });

@@ -6,7 +6,20 @@
   <title>FreshStart | Student Government Services Navigator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="page-loading">
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-shell">
+      <div class="loader-brand"></div>
+      <div class="loader-line short"></div>
+      <div class="loader-line long"></div>
+      <div class="loader-line medium"></div>
+      <div class="loader-grid">
+        <div class="loader-card"></div>
+        <div class="loader-card"></div>
+        <div class="loader-card"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== Navbar ===== -->
   <nav class="navbar">
@@ -211,6 +224,106 @@
           </div>
           <h3>SSS / TIN Assistance</h3>
           <p>Service centers for social security registration, taxpayer identification numbers, and employment compliance.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M12 36 L32 16 L52 36 V50 H12 Z" fill="#ffd966" fill-opacity="0.16" stroke="#ffffff" stroke-width="4" />
+              <path d="M22 50 V36" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M42 50 V36" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M26 50 H38" fill="none" stroke="#ffffff" stroke-width="4" />
+              <circle cx="32" cy="42" r="4" fill="#ffffff" />
+            </svg>
+          </div>
+          <h3>PAG-IBIG Center</h3>
+          <p>Nearest PAG-IBIG office for housing fund contributions, loan inquiries, and membership assistance.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="16" y="18" width="32" height="30" rx="6" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 32h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 40h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M24 48h16" fill="none" stroke="#ffffff" stroke-width="4" />
+            </svg>
+          </div>
+          <h3>PSA Birth Certificate</h3>
+          <p>Authorized PSA center for birth certificate applications, certified copies, and document verification.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="14" width="36" height="36" rx="10" fill="#ffd966" fill-opacity="0.16" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 22h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 32h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <circle cx="32" cy="45" r="6" fill="#ffffff" />
+              <path d="M24 38h16" fill="none" stroke="#ffffff" stroke-width="3" />
+            </svg>
+          </div>
+          <h3>National ID Center</h3>
+          <p>Nearest National ID registration center for enrollment, updates, and government ID assistance.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="16" y="18" width="32" height="28" rx="8" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <circle cx="32" cy="38" r="4" fill="#ffffff" />
+            </svg>
+          </div>
+          <h3>Postal ID Center</h3>
+          <p>Nearby Postal ID office for registration, renewals, and document identity verification.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="18" width="36" height="28" rx="8" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M24 34h16" fill="none" stroke="#ffffff" stroke-width="4" />
+              <circle cx="32" cy="48" r="4" fill="#ffffff" />
+            </svg>
+          </div>
+          <h3>BIR Office</h3>
+          <p>Nearest BIR office for tax registration, TIN updates, and official document processing.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M18 14h28a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M28 38h8" fill="none" stroke="#ffffff" stroke-width="3" />
+            </svg>
+          </div>
+          <h3>Passport Office</h3>
+          <p>Nearest passport office for application, renewal, and travel document services.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="18" width="36" height="28" rx="8" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M24 32h16" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M24 40h16" fill="none" stroke="#ffffff" stroke-width="4" />
+            </svg>
+          </div>
+          <h3>Voter Registration / ID</h3>
+          <p>Local office for voter registration, voter ID issuance, and election-related assistance.</p>
         </div>
       </div>
     </div>
