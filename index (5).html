@@ -1,129 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreshStart - Office Locator</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
-  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
-  <link
-    href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Locator | FreshStart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places,directions"></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-content">
-      <div class="brand">
-        <span class="brand-badge">FS</span>
-        <div>
-          <h1>FreshStart</h1>
-          <p>Student Government Services Navigator</p>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Main -->
-  <main class="container main-content">
-    <section class="hero">
-      <h2>Office Locator</h2>
-      <p>Find the nearest government office for your selected service.</p>
-    </section>
+    <nav><h1>FreshStart</h1></nav>
 
-    <!-- Search Panel -->
-    <section class="search-panel card">
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="addressInput">Your Address</label>
-          <input
-            type="text"
-            id="addressInput"
-            placeholder="Enter your current address (e.g. Imus, Cavite)"
-          />
-        </div>
+    <main class="container">
+        <header>
+            <h2>Office Locator</h2>
+            <p>Find the nearest government office for your selected service.</p>
+        </header>
 
-        <div class="form-group">
-          <label for="serviceSelect">Government Service</label>
-          <select id="serviceSelect">
-            <option value="">Select a service</option>
-            <option value="Barangay Clearance">Barangay Clearance</option>
-            <option value="PhilHealth">PhilHealth</option>
-            <option value="NBI Clearance">NBI Clearance</option>
-            <option value="SSS Registration">SSS Registration</option>
-            <option value="TIN / BIR Registration">TIN / BIR Registration</option>
-            <option value="Voter's Registration">Voter's Registration</option>
-            <option value="Pag-IBIG Membership">Pag-IBIG Membership</option>
-            <option value="PSA Documents">PSA Documents</option>
-            <option value="National ID">National ID</option>
-            <option value="Passport">Passport</option>
-            <option value="Scholarship Application">Scholarship Application</option>
-          </select>
-        </div>
-
-        <div class="form-group button-group">
-          <label class="hidden-label">Action</label>
-          <button id="findOfficeBtn">Find Nearest Office</button>
-        </div>
-      </div>
-
-      <div id="messageBox" class="message-box" aria-live="polite"></div>
-    </section>
-
-    <!-- Main Layout -->
-    <section class="content-grid">
-      <!-- Left -->
-      <div class="left-column">
-        <section class="card map-card">
-          <div id="map"></div>
+        <section class="controls">
+            <input type="text" id="addressInput" placeholder="Enter your current address (e.g., Imus, Cavite)">
+            <select id="serviceSelect">
+                <option value="">Select a Service</option>
+                <option value="Barangay Clearance">Barangay Clearance</option>
+                <option value="PhilHealth">PhilHealth</option>
+                <option value="NBI Clearance">NBI Clearance</option>
+                </select>
+            <button onclick="findNearestOffice()">Find Nearest Office</button>
         </section>
 
-        <section class="card route-summary-card">
-          <h3>Route Summary</h3>
-          <div id="routeSummary" class="empty-state">
-            Search for an office to view route distance and travel time.
-          </div>
-        </section>
+        <div id="map"></div>
+        <div id="error-msg" class="error"></div>
 
-        <section class="card nearby-card">
-          <h3>Nearby Offices</h3>
-          <div id="nearbyOfficesList" class="office-list empty-state">
-            Nearby office results will appear here.
-          </div>
-        </section>
-      </div>
+        <section id="result-card" class="card hidden"></section>
+        <section id="nearby-list"></section>
+    </main>
 
-      <!-- Right -->
-      <aside class="right-column">
-        <section class="card office-info-card">
-          <h3>Nearest Office Details</h3>
-          <div id="officeInfo" class="empty-state">
-            Select a service and enter your location to see office details.
-          </div>
-        </section>
-      </aside>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-
-  <!--
-    Replace YOUR_API_KEY with your actual Google Maps API key.
-    Make sure these APIs are enabled in Google Cloud:
-    - Maps JavaScript API
-    - Places API
-    - Geocoding API
-    - Directions API
-  -->
-  <script
-    src="[maps.googleapis.com](https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap)"
-    async
-    defer
-  ></script>
+    <script src="script.js"></script>
 </body>
 </html>
