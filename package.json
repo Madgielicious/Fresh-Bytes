@@ -1,7 +1,7 @@
 {
-  "name": "fresh-bytes-ai",
+  "name": "fresh-start-ai",
   "version": "1.0.0",
-  "description": "Fresh Bytes AI chat proxy for Gemini API",
+  "description": "Fresh  AI chat proxy for Gemini API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

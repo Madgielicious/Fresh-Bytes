@@ -6,7 +6,20 @@
   <title>FreshStart | Student Government Services Navigator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="page-loading">
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-shell">
+      <div class="loader-brand"></div>
+      <div class="loader-line short"></div>
+      <div class="loader-line long"></div>
+      <div class="loader-line medium"></div>
+      <div class="loader-grid">
+        <div class="loader-card"></div>
+        <div class="loader-card"></div>
+        <div class="loader-card"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== Navbar ===== -->
   <nav class="navbar">
@@ -42,107 +55,8 @@
       <h2 class="section-title">Browse Government Services</h2>
       <p class="section-subtitle">Find step-by-step guides, requirements, and office details for the services freshmen need most.</p>
 
-      <div class="card-grid">
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <circle cx="26" cy="26" r="14" fill="none" stroke="#ffffff" stroke-width="4" />
-              <circle cx="26" cy="26" r="8" fill="#ffd966" fill-opacity="0.3" />
-              <path d="M34 34l14 14" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M42 18l6 6" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7" />
-              <path d="M24 20 l10 0" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.5" />
-              <path d="M14 44l16-4" fill="none" stroke="#ffd966" stroke-width="2" opacity="0.7" />
-            </svg>
-          </div>
-          <h3>Search Government Services</h3>
-          <p>Quickly find services, programs, and assistance relevant to new students and local requirements.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <path d="M12 26 L32 16 L52 26 L32 36 Z" fill="#ffd966" opacity="0.25" />
-              <path d="M12 26 L32 16 L52 26 L32 36 Z" fill="none" stroke="#ffffff" stroke-width="3" />
-              <path d="M32 16 L32 44" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M32 44 L20 50 L44 50 Z" fill="none" stroke="#ffffff" stroke-width="4" />
-              <path d="M32 16 L38 22 L44 18" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
-              <circle cx="46" cy="24" r="2" fill="#ffffff" />
-            </svg>
-          </div>
-          <h3>Scholarship Service</h3>
-          <p>Discover scholarship opportunities, eligibility requirements, and application tips for students.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <rect x="14" y="12" width="36" height="40" rx="6" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-width="3" />
-              <path d="M22 24h20" fill="none" stroke="#ffd966" stroke-width="4" stroke-linecap="round" />
-              <path d="M22 32h16" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M22 40h12" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M44 44l6 6 10-10" fill="none" stroke="#ffd966" stroke-width="4" stroke-linecap="round" />
-              <path d="M22 18h20" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6" />
-            </svg>
-          </div>
-          <h3>Requirements Checklist</h3>
-          <p>View clear, organized checklists so you know exactly what documents each service needs.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <path d="M18 18h28v12H18z" fill="#ffd966" fill-opacity="0.16" />
-              <path d="M18 18h28v12H18z" fill="none" stroke="#ffffff" stroke-width="4" />
-              <path d="M18 30h28v22H18z" fill="none" stroke="#ffffff" stroke-width="4" />
-              <path d="M26 38h12" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M26 46h8" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M42 24l10 8" fill="none" stroke="#ffd966" stroke-width="4" stroke-linecap="round" />
-              <path d="M32 18v-4" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8" />
-            </svg>
-          </div>
-          <h3>Step-by-Step Application Guide</h3>
-          <p>Follow guided instructions for completing applications, forms, and local government procedures.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <path d="M32 10c-8.8 0-16 7.2-16 16 0 10 16 28 16 28s16-18 16-28c0-8.8-7.2-16-16-16z" fill="none" stroke="#ffffff" stroke-width="4" />
-              <circle cx="32" cy="26" r="6" fill="#ffffff" />
-              <path d="M32 37v12" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M26 46h12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8" />
-            </svg>
-          </div>
-          <h3>Nearest Government Office Locator</h3>
-          <p>Find nearby service centers, local offices, and branch locations for in-person support.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <circle cx="32" cy="32" r="16" fill="#ffd966" fill-opacity="0.16" stroke="#ffffff" stroke-width="4" />
-              <path d="M32 22v8l7 5" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M32 20a10 10 0 0 1 10 10" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6" />
-              <path d="M26 28h12" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.7" />
-            </svg>
-          </div>
-          <h3>Office Hours and Contact Information</h3>
-          <p>Get up-to-date office hours, phone numbers, and contact details for government services.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-              <path d="M16 20h32v24H16z" fill="#ffffff" opacity="0.12" />
-              <path d="M16 24l14 10L48 24" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-              <path d="M20 32h24" fill="none" stroke="#ffffff" stroke-width="3" />
-              <path d="M20 40h18" fill="none" stroke="#ffffff" stroke-width="3" />
-              <path d="M46 34l6 4" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
-            </svg>
-          </div>
-          <h3>AI Chatbot Assistant</h3>
-          <p>Ask FreshStart AI questions and get instant help from your student services assistant.</p>
-        </div>
+      <div class="card-grid" id="servicesContainer">
+        <!-- Service cards will be generated here by JavaScript -->
       </div>
     </div>
   </section>
@@ -239,6 +153,78 @@
           </div>
           <h3>PSA Birth Certificate</h3>
           <p>Authorized PSA center for birth certificate applications, certified copies, and document verification.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="14" width="36" height="36" rx="10" fill="#ffd966" fill-opacity="0.16" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 22h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 32h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <circle cx="32" cy="45" r="6" fill="#ffffff" />
+              <path d="M24 38h16" fill="none" stroke="#ffffff" stroke-width="3" />
+            </svg>
+          </div>
+          <h3>National ID Center</h3>
+          <p>Nearest National ID registration center for enrollment, updates, and government ID assistance.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="16" y="18" width="32" height="28" rx="8" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <circle cx="32" cy="38" r="4" fill="#ffffff" />
+            </svg>
+          </div>
+          <h3>Postal ID Center</h3>
+          <p>Nearby Postal ID office for registration, renewals, and document identity verification.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="18" width="36" height="28" rx="8" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M24 34h16" fill="none" stroke="#ffffff" stroke-width="4" />
+              <circle cx="32" cy="48" r="4" fill="#ffffff" />
+            </svg>
+          </div>
+          <h3>BIR Office</h3>
+          <p>Nearest BIR office for tax registration, TIN updates, and official document processing.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M18 14h28a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M28 38h8" fill="none" stroke="#ffffff" stroke-width="3" />
+            </svg>
+          </div>
+          <h3>Passport Office</h3>
+          <p>Nearest passport office for application, renewal, and travel document services.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="18" width="36" height="28" rx="8" fill="#ffd966" fill-opacity="0.14" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 24h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 34h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M20 44h24" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M24 32h16" fill="none" stroke="#ffffff" stroke-width="4" />
+              <path d="M24 40h16" fill="none" stroke="#ffffff" stroke-width="4" />
+            </svg>
+          </div>
+          <h3>Voter Registration / ID</h3>
+          <p>Local office for voter registration, voter ID issuance, and election-related assistance.</p>
         </div>
       </div>
     </div>
@@ -360,6 +346,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== Service Modal ===== -->
+  <div class="service-modal" id="serviceModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="closeServiceModal" aria-label="Close modal">×</button>
+      <div class="modal-content" id="serviceModalBody">
+        <!-- Service details will be injected here by JavaScript -->
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
