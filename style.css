@@ -193,7 +193,7 @@ a {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-primary {
@@ -253,7 +253,8 @@ a {
   border-radius: 14px;
   padding: 28px;
   text-align: left;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
+  will-change: transform;
 }
 
 .card:hover {
@@ -338,8 +339,9 @@ a {
 
 .card.reveal {
   opacity: 0;
-  transform: translateY(24px) scale(0.96);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 0.32s ease, transform 0.32s ease;
+  will-change: opacity, transform;
 }
 
 .card.reveal.visible {
@@ -579,9 +581,13 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+  align-items: start;
+  grid-auto-rows: minmax(min-content, max-content);
 }
 
 .faq-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--cream);
   border: 1px solid var(--border-light);
   border-radius: 18px;
@@ -631,11 +637,12 @@ a {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.25s ease;
+  transition: max-height 0.22s ease-out, opacity 0.18s ease-out, padding 0.18s ease-out;
+  will-change: max-height, opacity;
 }
 
 .faq-card.open .faq-answer {
-  max-height: 300px;
+  max-height: 260px;
   padding: 0 24px 22px;
   opacity: 1;
 }

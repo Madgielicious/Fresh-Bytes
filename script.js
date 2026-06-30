@@ -112,7 +112,7 @@ function initFaqAccordion() {
       if (!card) return;
 
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      card.classList.toggle('open');
+      card.classList.toggle('open', !expanded);
       toggle.setAttribute('aria-expanded', String(!expanded));
     });
   });
