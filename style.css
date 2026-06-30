@@ -72,14 +72,18 @@ a {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   color: var(--text-light);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 20px;
 }
 
-.logo span {
+.logo-fresh {
+  color: var(--text-light);
+}
+
+.logo-start {
   color: var(--gold-accent);
 }
 
@@ -258,16 +262,94 @@ a {
 }
 
 .card-icon {
-  width: 50px;
-  height: 50px;
-  background-color: var(--maroon);
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #930f0f 0%, #7d0b0b 100%);
   color: var(--text-light);
-  border-radius: 12px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
   margin-bottom: 16px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.card-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--text-light);
+}
+
+.card-icon svg path,
+.card-icon svg circle,
+.card-icon svg rect {
+  stroke: var(--text-light);
+}
+
+.card-icon svg path:not([fill]),
+.card-icon svg circle:not([fill]),
+.card-icon svg rect:not([fill]) {
+  fill: none;
+}
+
+.card-icon.icon-search::before {
+  content: 'SR';
+}
+
+.card-icon.icon-scholarship::before {
+  content: 'SC';
+}
+
+.card-icon.icon-checklist::before {
+  content: 'CL';
+}
+
+.card-icon.icon-guide::before {
+  content: 'GD';
+}
+
+.card-icon.icon-locator::before {
+  content: 'LO';
+}
+
+.card-icon.icon-hours::before {
+  content: 'HR';
+}
+
+.card-icon.icon-chat::before {
+  content: 'AI';
+}
+
+.card-icon.icon-office::before {
+  content: 'BH';
+}
+
+.card-icon.icon-health::before {
+  content: 'PH';
+}
+
+.card-icon.icon-clearance::before {
+  content: 'NB';
+}
+
+.card-icon.icon-tin::before {
+  content: 'SS';
+}
+
+.card.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.card.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card.reveal.visible.leave {
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
 }
 
 .card h3 {
@@ -490,5 +572,82 @@ a {
   .chatbot-section {
     padding: 32px 24px;
     margin: 0 16px;
+  }
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.faq-card {
+  background-color: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.faq-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  border: none;
+  background: transparent;
+  color: var(--maroon-dark);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-toggle:hover,
+.faq-toggle:focus-visible {
+  background-color: rgba(128, 0, 0, 0.04);
+}
+
+.faq-toggle span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faq-arrow {
+  width: 20px;
+  height: 20px;
+  color: var(--maroon-dark);
+  transition: transform 0.25s ease;
+}
+
+.faq-card.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 24px 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.25s ease;
+}
+
+.faq-card.open .faq-answer {
+  max-height: 300px;
+  padding: 0 24px 22px;
+  opacity: 1;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 }

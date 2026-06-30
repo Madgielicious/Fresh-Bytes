@@ -78,3 +78,47 @@ if (chatForm && chatInput && chatWindow) {
     }
   });
 }
+
+function initRevealOnScroll() {
+  const options = {
+    root: null,
+    rootMargin: '0px 0px -100px 0px',
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.classList.remove('leave');
+      } else {
+        entry.target.classList.remove('visible');
+        entry.target.classList.add('leave');
+      }
+    });
+  }, options);
+
+  document.querySelectorAll('.card.reveal').forEach((card) => {
+    observer.observe(card);
+  });
+}
+
+function initFaqAccordion() {
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+
+  faqToggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const card = toggle.closest('.faq-card');
+      if (!card) return;
+
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      card.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(!expanded));
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initRevealOnScroll();
+  initFaqAccordion();
+});

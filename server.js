@@ -36,7 +36,7 @@ app.post('/api/chat', async (req, res) => {
               role: 'user',
               parts: [
                 {
-                  text: `You are Fresh Bytes AI, a helpful assistant for new students. Answer briefly and clearly. Focus on government services, student requirements, and local processes. Question: ${question}`
+                  text: `You are FreshStart AI, a helpful assistant for new students. Answer briefly and clearly. Focus on government services, student requirements, and local processes. Question: ${question}`
                 }
               ]
             }
